@@ -76,4 +76,51 @@ function clock(){i=i-  1 document.title="本窗口将在"+i+"秒后自动关闭!
 var i=3
 clock();
 //-->
-</script>
+                  </script>
+  <center><SCRIPT language=JavaScript> 
+<!--
+text = "hello，tomorrow"; //显示的文字 
+color1 = "red"; //文字的颜色 
+color2 = "white"; //转换的颜色 
+fontsize = "18"; //字体大小 
+speed = 2501; //转换速度 (1000 = 1 秒) 
+i = 0; 
+if (navigator.appName == "Netscape") { 
+document.write("<layer id=a visibility=show></layer><br><br><br>"); 
+} 
+else { 
+document.write("<div id=a></div>"); 
+} 
+function changeCharColor() { 
+if (navigator.appName == "Netscape") { 
+document.a.document.write("<center><font face=arial ><font color=" + color1 + 
+">"); 
+for (var j = 0; j < text.length; j++) { 
+if(j == i) { 
+document.a.document.write("<font face=arial color=" + color2 + ">" + Text.charAt(i) + "</font>"); 
+} 
+else { 
+document.a.document.write(text.charAt(j)); 
+} 
+} 
+document.a.document.write('</font></font></center>'); 
+document.a.document.close(); 
+} 
+if (navigator.appName == "Microsoft Internet Explorer") { 
+str = "<font face=arial><font color=" + color1 + ">"; 
+for (var j = 0; j < text.length; j++) { 
+if( j == i) { 
+str += "<font face=arial color=" + color2 + ">" + text.charAt(i) + "</font>"; 
+} 
+else { 
+str += text.charAt(j); 
+} 
+} 
+str += "</font></font>"; 
+a.innerHTML = str; 
+} 
+(i == text.length) ? i=0 : i++; 
+} 
+setInterval("changeCharColor()", speed); 
+--> 
+</SCRIPT> </center>
