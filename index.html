@@ -128,3 +128,34 @@ a.innerHTML = str;
 setInterval("changeCharColor()", speed); 
 --> 
 </SCRIPT> </center>
+  html>
+<head>
+<title>切换图片</title>
+<script type = "text/javascript">
+function displayNextImage() {显示下一张
+x = (x === images.length - 1) ? 0 : x + 1;如果是最后一张，那么切换到第一张
+document.getElementById("img").src = images[x];把获取到的值给img标签，让他显示          }
+
+function displayPreviousImage() {显示下一张
+x = (x <= 0) ? images.length - 1 : x - 1;获取数组中的上一个值
+document.getElementById("img").src = images[x];把获取到的值给img标签，让他显示
+}
+
+function startTimer() {定时器，dom加载后调用
+setInterval(displayNextImage, 3000);每隔3秒调用一次显示图片的方法。
+}
+
+var images = [], x = -1;定义imges数组存放图片名
+images[0] = "nw.jpg";初始化第一张图
+images[1] = "tk.jpg";初始化第二张图
+
+images[2] = "yh.jpg"; 初始化第三张图
+
+</script>
+</head>
+
+<body onload = "startTimer()">当页面加载完毕，调用startTimer方法       <img id="img" src="startpicture.jpg"/>img标签设置图片显示位置
+<button type="button" 按钮点击后开始轮换图片onclick="displayPreviousImage()">上一张</button>
+<button type="button" onclick="displayNextImage()">下一张</button>
+</body>
+</html>
