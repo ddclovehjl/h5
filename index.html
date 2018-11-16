@@ -36,11 +36,11 @@ setInterval("changeColor()",200);
      &emsp;&emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &nbsp;&emsp; &emsp; &emsp;<img src="https://p0.ssl.qhimgs4.com/t01f7dd37cec519d990.jpg">
      </center></div></p></center></div></p>
 
-<div style="float:left"><meta charset="UTF-8">
+<meta charset="UTF-8">
 <title>Document</title>
 <script type="text/javascript">
 
-window.onload=function(){
+<div style="float:left">window.onload=function(){
 var oImg=document.getElementById("img1");
 var arrImgUrl=["img1.jpg","img2.jpg","img3.jpg","img4.jpg"]
 var num=0;
@@ -53,15 +53,28 @@ oImg.src=arrImgUrl[num];
 }
 
 setInterval(Tab,1000)
+   <img id="img1" src="img1.jpg" width="400" height="300">
+}</div>
+
+  <div style="float:right">var oImg=document.getElementById("img11");
+var arrImgUrl=["img11.jpg","img12.jpg","img13.jpg","img4.jpg"]
+var num=10;
+function Tab(){
+num++;
+if(num>arrImgUrl.length-1){
+num=10;
 }
+oImg.src=arrImgUrl[num];
+}
+
+setInterval(Tab,1000) 
+  <img id="img11" src="img11.jpg" width="400" height="300">
+} </div>
 
 </script>
 </head>
 <body>
-  <img id="img1" src="img1.jpg" width="400" height="300"></div>
-
-<div style="float:right"><img src="img11.jpg"/>
-</div>
+ 
 
 
 
